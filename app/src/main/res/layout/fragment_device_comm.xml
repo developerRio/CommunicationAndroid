@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DeviceCommFragment">
+
+    <TextView
+        android:id="@+id/received_data_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/data_will_show_here"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp_15" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="1dp"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/message_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/send_message_button"
+            android:hint="@string/type_your_message"
+            android:importantForAutofill="no"
+            android:inputType="textShortMessage" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/send_message_button"
+            style="@style/ButtonTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/send"
+            android:textColor="@color/text_color"
+            app:cornerRadius="5dp" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fetch_my_current_location"
+        style="@style/ButtonTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_50"
+        android:text="@string/get_my_current_location"
+        android:textColor="@color/text_color"
+        app:cornerRadius="5dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/send_my_location"
+        style="@style/ButtonTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fetch_my_current_location"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/share_this_location"
+        android:textColor="@color/text_color"
+        app:cornerRadius="5dp" />
+
+    <TextView
+        android:id="@+id/location_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/send_my_location"
+        android:layout_marginTop="@dimen/dp_50"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
