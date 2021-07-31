@@ -51,7 +51,10 @@ class SelectDeviceFragment : Fragment(), DeviceSelectionInterface {
                         intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)
                     val deviceName = device?.name
                     val deviceHardwareAddress = device?.address // MAC address
-                    Log.i(TAG, "onReceive_mNewDeviceReceiver name = $deviceName address = $deviceHardwareAddress")
+                    Log.i(
+                        TAG,
+                        "onReceive_mNewDeviceReceiver name = $deviceName address = $deviceHardwareAddress"
+                    )
                     showToast(context, "Paired with $deviceName successfully.")
                 }
             }
@@ -164,18 +167,6 @@ class SelectDeviceFragment : Fragment(), DeviceSelectionInterface {
         devicesAdapter.addItems(devices)
         binding.pairedDevicesRecyclerView.adapter = devicesAdapter
     }
-
-    /*override fun onItemClick(p0: AdapterView<*>?, p1: View?, position: Int, p3: Long) {
-        mBluetoothAdapter.cancelDiscovery()
-
-        val newDeviceName = mBTDevicesList[position].name
-        val newDeviceAddress = mBTDevicesList[position].address
-        Log.i(
-            TAG,
-            "onItemClick_device_to_be_paired newDeviceName = $newDeviceName newDeviceAddress = $newDeviceAddress "
-        )
-        mBTDevicesList[position].createBond()
-    }*/
 
     override fun selectedDeviceInfo(device: BluetoothDevice) {
         val bundle = Bundle()
