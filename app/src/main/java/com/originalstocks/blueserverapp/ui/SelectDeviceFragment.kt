@@ -20,7 +20,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.originalstocks.blueserverapp.IBluetoothA2dp
 import com.originalstocks.blueserverapp.R
-import com.originalstocks.blueserverapp.data.adapter.PairedDevicesAdapter
+import com.originalstocks.blueserverapp.ui.adapter.PairedDevicesAdapter
 import com.originalstocks.blueserverapp.data.interfaces.DeviceSelectionInterface
 import com.originalstocks.blueserverapp.databinding.FragmentSelectDeviceBinding
 import com.originalstocks.blueserverapp.utils.REQUEST_DISCOVERABLE_BLUETOOTH

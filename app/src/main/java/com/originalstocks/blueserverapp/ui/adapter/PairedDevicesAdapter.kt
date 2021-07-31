@@ -1,4 +1,4 @@
-package com.originalstocks.blueserverapp.data.adapter
+package com.originalstocks.blueserverapp.ui.adapter
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice

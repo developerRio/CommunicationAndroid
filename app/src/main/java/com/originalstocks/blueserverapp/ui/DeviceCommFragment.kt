@@ -86,7 +86,8 @@ class DeviceCommFragment : Fragment(), DataCommInterface {
             /* checking location permissions*/
             checkPermission()
         }
-        locationManager = requireActivity().getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        locationManager =
+            requireActivity().getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
         binding.sendMyLocation.setOnClickListener {
             val currentLocation = binding.fetchMyCurrentLocation.text.toString()
@@ -198,7 +199,10 @@ class DeviceCommFragment : Fragment(), DataCommInterface {
                             "onLocationChanged_location lat = ${location.latitude} long = ${location.longitude}"
                         )
                         val currentLocation = getAddress(location.longitude, location.latitude)
-                        Log.i(TAG, "onViewCreated_fetchLocationAccordingToLatLong = $currentLocation")
+                        Log.i(
+                            TAG,
+                            "onViewCreated_fetchLocationAccordingToLatLong = $currentLocation"
+                        )
                         binding.fetchMyCurrentLocation.text = currentLocation
 
 
